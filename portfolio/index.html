@@ -4,8 +4,7 @@
         <meta charset="utf-8">
         <title>Kifunye Mark </title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Free Website Template" name="keywords">
-        <meta content="Free Website Template" name="description">
+       
 
         <!-- Favicon -->
         <link href="img/favicon.ico" rel="icon">
@@ -891,7 +890,21 @@
         <script src="mail/jqBootstrapValidation.min.js"></script>
         <script src="mail/contact.js"></script>
 
-        <!-- Template Javascript -->
+        <!--  Javascript -->
         <script src="js/main.js"></script>
+            <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll('.navbar .nav-link');
+    const navbarCollapse = document.getElementById('navbarCollapse');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', function () {
+        if (window.innerWidth < 992 && navbarCollapse.classList.contains('show')) {
+          $('.navbar-collapse').collapse('hide');
+        }
+      });
+    });
+  });
+</script>
     </body>
 </html>
